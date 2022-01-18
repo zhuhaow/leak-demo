@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		363CC38C279680760010695C /* leak_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC38B279680760010695C /* leak_demoApp.swift */; };
+		363CC38E279680760010695C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC38D279680760010695C /* ContentView.swift */; };
+		363CC390279680770010695C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363CC38F279680770010695C /* Assets.xcassets */; };
+		363CC393279680770010695C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363CC392279680770010695C /* Preview Assets.xcassets */; };
+		363CC3B8279680A50010695C /* SwiftyXPC in Frameworks */ = {isa = PBXBuildFile; productRef = 363CC3B7279680A50010695C /* SwiftyXPC */; };
+		363CC3BA279681020010695C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC3B9279681020010695C /* Service.swift */; };
+		363CC3CA2796817C0010695C /* xpc-server.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 363CC3BF2796817C0010695C /* xpc-server.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		363CC3D0279682280010695C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC3CF279682280010695C /* main.swift */; };
+		363CC3D3279686670010695C /* SwiftyXPC in Frameworks */ = {isa = PBXBuildFile; productRef = 363CC3D2279686670010695C /* SwiftyXPC */; };
+		363CC3D5279686730010695C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC3D4279686730010695C /* Service.swift */; };
+		363CC3D727968A1E0010695C /* PipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC3D627968A1E0010695C /* PipeResponse.swift */; };
+		363CC3D827968A270010695C /* PipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CC3D627968A1E0010695C /* PipeResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		363CC3C82796817C0010695C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 363CC380279680760010695C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 363CC3BE2796817C0010695C;
+			remoteInfo = xpc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		363CC3CE2796817C0010695C /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				363CC3CA2796817C0010695C /* xpc-server.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		363CC388279680760010695C /* leak-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "leak-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		363CC38B279680760010695C /* leak_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leak_demoApp.swift; sourceTree = "<group>"; };
+		363CC38D279680760010695C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		363CC38F279680770010695C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		363CC392279680770010695C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		363CC394279680770010695C /* leak_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = leak_demo.entitlements; sourceTree = "<group>"; };
+		363CC3B9279681020010695C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		363CC3BF2796817C0010695C /* xpc-server.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "xpc-server.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		363CC3C72796817C0010695C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		363CC3CF279682280010695C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		363CC3D4279686730010695C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		363CC3D627968A1E0010695C /* PipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeResponse.swift; sourceTree = "<group>"; };
+		363CC3D92796959E0010695C /* libswiftXPC.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftXPC.tbd; path = usr/lib/swift/libswiftXPC.tbd; sourceTree = SDKROOT; };
+		363CC3DA279695A70010695C /* libxpc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxpc.tbd; path = usr/lib/system/libxpc.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		363CC385279680760010695C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363CC3B8279680A50010695C /* SwiftyXPC in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		363CC3BC2796817C0010695C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363CC3D3279686670010695C /* SwiftyXPC in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		363CC37F279680760010695C = {
+			isa = PBXGroup;
+			children = (
+				363CC3D627968A1E0010695C /* PipeResponse.swift */,
+				363CC38A279680760010695C /* leak-demo */,
+				363CC3C02796817C0010695C /* xpc */,
+				363CC389279680760010695C /* Products */,
+				363CC3D1279686670010695C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		363CC389279680760010695C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				363CC388279680760010695C /* leak-demo.app */,
+				363CC3BF2796817C0010695C /* xpc-server.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		363CC38A279680760010695C /* leak-demo */ = {
+			isa = PBXGroup;
+			children = (
+				363CC3B9279681020010695C /* Service.swift */,
+				363CC38B279680760010695C /* leak_demoApp.swift */,
+				363CC38D279680760010695C /* ContentView.swift */,
+				363CC38F279680770010695C /* Assets.xcassets */,
+				363CC394279680770010695C /* leak_demo.entitlements */,
+				363CC391279680770010695C /* Preview Content */,
+			);
+			path = "leak-demo";
+			sourceTree = "<group>";
+		};
+		363CC391279680770010695C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				363CC392279680770010695C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		363CC3C02796817C0010695C /* xpc */ = {
+			isa = PBXGroup;
+			children = (
+				363CC3C72796817C0010695C /* Info.plist */,
+				363CC3CF279682280010695C /* main.swift */,
+				363CC3D4279686730010695C /* Service.swift */,
+			);
+			path = xpc;
+			sourceTree = "<group>";
+		};
+		363CC3D1279686670010695C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				363CC3DA279695A70010695C /* libxpc.tbd */,
+				363CC3D92796959E0010695C /* libswiftXPC.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		363CC387279680760010695C /* leak-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 363CC3AD279680770010695C /* Build configuration list for PBXNativeTarget "leak-demo" */;
+			buildPhases = (
+				363CC384279680760010695C /* Sources */,
+				363CC385279680760010695C /* Frameworks */,
+				363CC386279680760010695C /* Resources */,
+				363CC3CE2796817C0010695C /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				363CC3C92796817C0010695C /* PBXTargetDependency */,
+			);
+			name = "leak-demo";
+			packageProductDependencies = (
+				363CC3B7279680A50010695C /* SwiftyXPC */,
+			);
+			productName = "leak-demo";
+			productReference = 363CC388279680760010695C /* leak-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		363CC3BE2796817C0010695C /* xpc-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 363CC3CB2796817C0010695C /* Build configuration list for PBXNativeTarget "xpc-server" */;
+			buildPhases = (
+				363CC3BB2796817C0010695C /* Sources */,
+				363CC3BC2796817C0010695C /* Frameworks */,
+				363CC3BD2796817C0010695C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xpc-server";
+			packageProductDependencies = (
+				363CC3D2279686670010695C /* SwiftyXPC */,
+			);
+			productName = xpc;
+			productReference = 363CC3BF2796817C0010695C /* xpc-server.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		363CC380279680760010695C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					363CC387279680760010695C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					363CC3BE2796817C0010695C = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+				};
+			};
+			buildConfigurationList = 363CC383279680760010695C /* Build configuration list for PBXProject "leak-demo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 363CC37F279680760010695C;
+			packageReferences = (
+				363CC3B6279680A50010695C /* XCRemoteSwiftPackageReference "SwiftyXPC" */,
+			);
+			productRefGroup = 363CC389279680760010695C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				363CC387279680760010695C /* leak-demo */,
+				363CC3BE2796817C0010695C /* xpc-server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		363CC386279680760010695C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363CC393279680770010695C /* Preview Assets.xcassets in Resources */,
+				363CC390279680770010695C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		363CC3BD2796817C0010695C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		363CC384279680760010695C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363CC38E279680760010695C /* ContentView.swift in Sources */,
+				363CC38C279680760010695C /* leak_demoApp.swift in Sources */,
+				363CC3D827968A270010695C /* PipeResponse.swift in Sources */,
+				363CC3BA279681020010695C /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		363CC3BB2796817C0010695C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363CC3D0279682280010695C /* main.swift in Sources */,
+				363CC3D727968A1E0010695C /* PipeResponse.swift in Sources */,
+				363CC3D5279686730010695C /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		363CC3C92796817C0010695C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 363CC3BE2796817C0010695C /* xpc-server */;
+			targetProxy = 363CC3C82796817C0010695C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		363CC3AB279680770010695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		363CC3AC279680770010695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		363CC3AE279680770010695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "leak-demo/leak_demo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"leak-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = H5443445N6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhao.leak-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		363CC3AF279680770010695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "leak-demo/leak_demo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"leak-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = H5443445N6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhao.leak-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		363CC3CC2796817C0010695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5443445N6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = xpc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "xpc-server";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhao.leak-demo.xpc-server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		363CC3CD2796817C0010695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5443445N6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = xpc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "xpc-server";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhao.leak-demo.xpc-server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		363CC383279680760010695C /* Build configuration list for PBXProject "leak-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363CC3AB279680770010695C /* Debug */,
+				363CC3AC279680770010695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		363CC3AD279680770010695C /* Build configuration list for PBXNativeTarget "leak-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363CC3AE279680770010695C /* Debug */,
+				363CC3AF279680770010695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		363CC3CB2796817C0010695C /* Build configuration list for PBXNativeTarget "xpc-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363CC3CC2796817C0010695C /* Debug */,
+				363CC3CD2796817C0010695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		363CC3B6279680A50010695C /* XCRemoteSwiftPackageReference "SwiftyXPC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com.cnpmjs.org/zhuhaow/SwiftyXPC";
+			requirement = {
+				branch = owned_fd;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		363CC3B7279680A50010695C /* SwiftyXPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 363CC3B6279680A50010695C /* XCRemoteSwiftPackageReference "SwiftyXPC" */;
+			productName = SwiftyXPC;
+		};
+		363CC3D2279686670010695C /* SwiftyXPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 363CC3B6279680A50010695C /* XCRemoteSwiftPackageReference "SwiftyXPC" */;
+			productName = SwiftyXPC;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 363CC380279680760010695C /* Project object */;
+}
